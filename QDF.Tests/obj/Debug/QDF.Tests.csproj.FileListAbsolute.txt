@@ -1,0 +1,5 @@
+F:\Study\QDF\QDF.Tests\bin\Debug\QDF.Tests.dll
+F:\Study\QDF\QDF.Tests\bin\Debug\QDF.Tests.pdb
+F:\Study\QDF\QDF.Tests\obj\Debug\QDF.Tests.csprojResolveAssemblyReference.cache
+F:\Study\QDF\QDF.Tests\obj\Debug\QDF.Tests.dll
+F:\Study\QDF\QDF.Tests\obj\Debug\QDF.Tests.pdb

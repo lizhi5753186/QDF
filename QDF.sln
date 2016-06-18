@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDF", "QDF\QDF.csproj", "{9DFB2579-472B-454F-A9E7-D237EBC7414A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6480E2F8-FF31-4196-B064-4303378ADA7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDF.Tests", "QDF.Tests\QDF.Tests.csproj", "{018EFF2D-76E5-4E65-B23D-26BC90A00A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDF.EntityFramework", "QDF.EntityFramework\QDF.EntityFramework.csproj", "{CFBC4F18-38AF-45CB-9AD8-395C6F19807B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDF.NHibernate", "QDF.NHibernate\QDF.NHibernate.csproj", "{72F551C2-FA18-4B4D-95F6-46880BBB1072}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{FEB76649-12AA-46BE-B33B-F360083739EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QDF.ADO.NET", "QDF.ADO.NET\QDF.ADO.NET.csproj", "{992D9AA9-08CF-422A-B3BB-8BB40BFA85CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DFB2579-472B-454F-A9E7-D237EBC7414A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFB2579-472B-454F-A9E7-D237EBC7414A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFB2579-472B-454F-A9E7-D237EBC7414A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFB2579-472B-454F-A9E7-D237EBC7414A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018EFF2D-76E5-4E65-B23D-26BC90A00A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018EFF2D-76E5-4E65-B23D-26BC90A00A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018EFF2D-76E5-4E65-B23D-26BC90A00A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018EFF2D-76E5-4E65-B23D-26BC90A00A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBC4F18-38AF-45CB-9AD8-395C6F19807B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBC4F18-38AF-45CB-9AD8-395C6F19807B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBC4F18-38AF-45CB-9AD8-395C6F19807B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBC4F18-38AF-45CB-9AD8-395C6F19807B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F551C2-FA18-4B4D-95F6-46880BBB1072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F551C2-FA18-4B4D-95F6-46880BBB1072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F551C2-FA18-4B4D-95F6-46880BBB1072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F551C2-FA18-4B4D-95F6-46880BBB1072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992D9AA9-08CF-422A-B3BB-8BB40BFA85CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992D9AA9-08CF-422A-B3BB-8BB40BFA85CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992D9AA9-08CF-422A-B3BB-8BB40BFA85CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992D9AA9-08CF-422A-B3BB-8BB40BFA85CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{018EFF2D-76E5-4E65-B23D-26BC90A00A04} = {6480E2F8-FF31-4196-B064-4303378ADA7C}
+	EndGlobalSection
+EndGlobal

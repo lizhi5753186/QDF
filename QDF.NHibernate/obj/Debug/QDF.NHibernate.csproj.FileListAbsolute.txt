@@ -1,0 +1,5 @@
+F:\Study\QDF\QDF.NHibernate\bin\Debug\QDF.NHibernate.dll
+F:\Study\QDF\QDF.NHibernate\bin\Debug\QDF.NHibernate.pdb
+F:\Study\QDF\QDF.NHibernate\obj\Debug\QDF.NHibernate.csprojResolveAssemblyReference.cache
+F:\Study\QDF\QDF.NHibernate\obj\Debug\QDF.NHibernate.dll
+F:\Study\QDF\QDF.NHibernate\obj\Debug\QDF.NHibernate.pdb

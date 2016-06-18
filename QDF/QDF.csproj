@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DFB2579-472B-454F-A9E7-D237EBC7414A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QDF</RootNamespace>
+    <AssemblyName>QDF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BeITMemcached, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e93a079c1f37843, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\MemCache\BeITMemcached.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NOPI\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NOPI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NOPI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NOPI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NOPI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.52.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.4.0.52\lib\net40\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.52\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.52.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Redis.4.0.52\lib\net40\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.52.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.0.52\lib\net40\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Services\ApplicationService.cs" />
+    <Compile Include="Application\Services\QdfServiceBase.cs" />
+    <Compile Include="Application\Services\Dto\EntityDto.cs" />
+    <Compile Include="Application\Services\Dto\EntityDtoWithTPrimaryKey.cs" />
+    <Compile Include="Application\Services\Dto\IdInput.cs" />
+    <Compile Include="Application\Services\Dto\IDoubleWayDto.cs" />
+    <Compile Include="Application\Services\Dto\IDto.cs" />
+    <Compile Include="Application\Services\Dto\IEntityDto.cs" />
+    <Compile Include="Application\Services\Dto\IEntityDtoWithPrimaryKey.cs" />
+    <Compile Include="Application\Services\Dto\IHasLongTotalCount.cs" />
+    <Compile Include="Application\Services\Dto\IHasTotalCount.cs" />
+    <Compile Include="Application\Services\Dto\IInputDto.cs" />
+    <Compile Include="Application\Services\Dto\ILimitedResultRequest.cs" />
+    <Compile Include="Application\Services\Dto\IListResult.cs" />
+    <Compile Include="Application\Services\Dto\IOutputDto.cs" />
+    <Compile Include="Application\Services\Dto\IPagedResult.cs" />
+    <Compile Include="Application\Services\Dto\IPagedResultRequest.cs" />
+    <Compile Include="Application\Services\Dto\ISortedResultRequest.cs" />
+    <Compile Include="Application\Services\Dto\ListResultDto.cs" />
+    <Compile Include="Application\Services\Dto\NullableIdInput.cs" />
+    <Compile Include="Application\Services\Dto\PagedResultOutput.cs" />
+    <Compile Include="Application\Services\IApplicationService.cs" />
+    <Compile Include="Caching\Attributes\CacheAttribute.cs" />
+    <Compile Include="Caching\CacheExpired.cs" />
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Caching\CacheProvider\CacheProviderFactory.cs" />
+    <Compile Include="Caching\Configuration\CacheConfiguration.cs" />
+    <Compile Include="Caching\Configuration\CacheServerInfo.cs" />
+    <Compile Include="Caching\Enums\CacheType.cs" />
+    <Compile Include="Caching\Enums\CachingMethod.cs" />
+    <Compile Include="Caching\ICacheExpired.cs" />
+    <Compile Include="Caching\ICacheProvider.cs" />
+    <Compile Include="Caching\CacheProvider\LocalCacheProvider.cs" />
+    <Compile Include="Caching\CacheProvider\MemcachedProvider.cs" />
+    <Compile Include="Caching\CacheProvider\RedisCacheProvider.cs" />
+    <Compile Include="Collections\Extensions\CollectionExtensions.cs" />
+    <Compile Include="Collections\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Collections\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Compress\Rar\WinRarHelper.cs" />
+    <Compile Include="Compress\zip\ZipHelper.cs" />
+    <Compile Include="Configuration\ConfigElement.cs" />
+    <Compile Include="Configuration\ConfigManager.cs" />
+    <Compile Include="Configuration\DictionayBasedConfig.cs" />
+    <Compile Include="Configuration\DispatcherConfiguration.cs" />
+    <Compile Include="Configuration\IConfigElement.cs" />
+    <Compile Include="Configuration\IDictionaryBasedConfig.cs" />
+    <Compile Include="Configuration\Startup\QdfStartupConfiguration.cs" />
+    <Compile Include="Configuration\Startup\EventBusConfiguration.cs" />
+    <Compile Include="Configuration\Startup\IQdfStartupConfiguration.cs" />
+    <Compile Include="Configuration\Startup\IEventBusConfiguration.cs" />
+    <Compile Include="Dependency\BasicConventionalRegistrar.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationConfig.cs" />
+    <Compile Include="Dependency\ConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\DependencyLifeStyle.cs" />
+    <Compile Include="Dependency\IConventionalDependencyRegistrar.cs" />
+    <Compile Include="Dependency\IConventionalRegistrationContext.cs" />
+    <Compile Include="Dependency\IIocManager.cs" />
+    <Compile Include="Dependency\IIocRegistrar.cs" />
+    <Compile Include="Dependency\IIocResolver.cs" />
+    <Compile Include="Dependency\Installers\QdfCoreInstaller.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
+    <Compile Include="Dependency\IocRegistrarExtensions.cs" />
+    <Compile Include="Dependency\ISingletonDependency.cs" />
+    <Compile Include="Dependency\ITransientDependency.cs" />
+    <Compile Include="DisposeAction.cs" />
+    <Compile Include="Entities\Auditing\AuditedEntity.cs" />
+    <Compile Include="Entities\Auditing\AuditedEntityWithTPrimaryKey.cs" />
+    <Compile Include="Entities\Auditing\AuditedEntityWithTPrimaryKeyAndTUser.cs" />
+    <Compile Include="Entities\Auditing\CreationAuditedEntity.cs" />
+    <Compile Include="Entities\Auditing\CreationAuditedEntityWithTPrimaryKey.cs" />
+    <Compile Include="Entities\Auditing\CreationAuditedEntityWithTPrimaryKeyAndTUser.cs" />
+    <Compile Include="Entities\Auditing\FullAuditedEntity.cs" />
+    <Compile Include="Entities\Auditing\FullAuditedEntityWithTPrimaryKey.cs" />
+    <Compile Include="Entities\Auditing\FullAuditedEntityWithTPrimaryKeyAndTUser.cs" />
+    <Compile Include="Entities\Auditing\IAudited.cs" />
+    <Compile Include="Entities\Auditing\IAuditedWithTUser.cs" />
+    <Compile Include="Entities\Auditing\ICreateAuditedWithUser.cs" />
+    <Compile Include="Entities\Auditing\ICreationAudited.cs" />
+    <Compile Include="Entities\Auditing\IDeletionAudited.cs" />
+    <Compile Include="Entities\Auditing\IDeletionAuditedWithUser.cs" />
+    <Compile Include="Entities\Auditing\IFullAudited.cs" />
+    <Compile Include="Entities\Auditing\IFullAuditedWithTUser.cs" />
+    <Compile Include="Entities\Auditing\IHasCreationTime.cs" />
+    <Compile Include="Entities\Auditing\IModificationAudited.cs" />
+    <Compile Include="Entities\Auditing\IModificationAuditedWithUser.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityWithPrimaryKey.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\IEntityWithPrimaryKey.cs" />
+    <Compile Include="Entities\ISoftDelete.cs" />
+    <Compile Include="Events\Bus\Entities\DefaultEntityChangedEventHelper.cs" />
+    <Compile Include="Events\Bus\Entities\EntityChangedEventData.cs" />
+    <Compile Include="Events\Bus\Entities\EntityCreatedEventData.cs" />
+    <Compile Include="Events\Bus\Entities\EntityDeletedEventData.cs" />
+    <Compile Include="Events\Bus\Entities\EntityEventData.cs" />
+    <Compile Include="Events\Bus\Entities\EntityUpdatedEventData.cs" />
+    <Compile Include="Events\Bus\Entities\IEntityChangedEventHelper.cs" />
+    <Compile Include="Events\Bus\Entities\NullEntityChangedEventHelper.cs" />
+    <Compile Include="Events\Bus\EventBus.cs" />
+    <Compile Include="Events\Bus\EventData.cs" />
+    <Compile Include="Events\Bus\Exceptions\QdfHandledExceptionData.cs" />
+    <Compile Include="Events\Bus\Exceptions\ExceptionData.cs" />
+    <Compile Include="Events\Bus\Factories\IEventHandlerFactory.cs" />
+    <Compile Include="Events\Bus\Factories\Internals\FactoryUnregistrar.cs" />
+    <Compile Include="Events\Bus\Factories\Internals\SingleInstanceHandlerFactory.cs" />
+    <Compile Include="Events\Bus\Factories\Internals\TransientEventHandlerFactory.cs" />
+    <Compile Include="Events\Bus\Factories\IocHandlerFactory.cs" />
+    <Compile Include="Events\Bus\Handlers\IEventHandler.cs" />
+    <Compile Include="Events\Bus\Handlers\IEventHandlerWithTEventData.cs" />
+    <Compile Include="Events\Bus\Handlers\Internals\ActionEventHandler.cs" />
+    <Compile Include="Events\Bus\IEventBus.cs" />
+    <Compile Include="Events\Bus\IEventData.cs" />
+    <Compile Include="Events\Bus\IEventDataWithInheritableGenericArgument.cs" />
+    <Compile Include="Events\Bus\Installers\EventBusInstaller.cs" />
+    <Compile Include="Events\Bus\NullEventBus.cs" />
+    <Compile Include="Excel\ExcelHelper.cs" />
+    <Compile Include="Exceptions\QdfException.cs" />
+    <Compile Include="Extensions\ComparableExtensions.cs" />
+    <Compile Include="Extensions\DateTimeRangeExtensions.cs" />
+    <Compile Include="Extensions\DayOfWeekExtensions.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Ftp\FTPClientHelper.cs" />
+    <Compile Include="Interceptions\UnitOfWorkInterceptor.cs" />
+    <Compile Include="IO\DirectoryHelper.cs" />
+    <Compile Include="IO\Extensions\StreamExtensions.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="Linq\Extensions\QueryableExtensions.cs" />
+    <Compile Include="Logging\LogHelper.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\CurrentDomainAssemblyFinder.cs" />
+    <Compile Include="Reflection\Extensions\MemberInfoExtensions.cs" />
+    <Compile Include="Reflection\IAssemblyFinder.cs" />
+    <Compile Include="Reflection\ITypeFinder.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Reflection\TypeFinder.cs" />
+    <Compile Include="Reflection\TypeHelper.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IRepositoryWithTEntity.cs" />
+    <Compile Include="Repositories\IRepositoryWithTEntityAndTPrimaryKey.cs" />
+    <Compile Include="Repositories\QdfBaseRepository.cs" />
+    <Compile Include="Repositories\SortOrder.cs" />
+    <Compile Include="Serialization\Json\JsonExtensions.cs" />
+    <Compile Include="Serialization\Xml\XmlExtensions.cs" />
+    <Compile Include="Session\QdfSessionExtensions.cs" />
+    <Compile Include="Session\IQdfSession.cs" />
+    <Compile Include="Session\NullWdfSession.cs" />
+    <Compile Include="Threading\AsyncHelper.cs" />
+    <Compile Include="Threading\Extensions\LockExtensions.cs" />
+    <Compile Include="Threading\InternalAsyncHelper.cs" />
+    <Compile Include="Timing\ClockManager.cs" />
+    <Compile Include="Timing\DateTimeRange.cs" />
+    <Compile Include="Timing\IClockProvider.cs" />
+    <Compile Include="Timing\IDateTimeRange.cs" />
+    <Compile Include="Timing\LocalClockProvider.cs" />
+    <Compile Include="Timing\UtcClockProvider.cs" />
+    <Compile Include="Uow\IUnitOfWork.cs" />
+    <Compile Include="Uow\IUnitOfWorkManager.cs" />
+    <Compile Include="Uow\IUnitOfWorkProvider.cs" />
+    <Compile Include="Uow\NullUnitOfWork.cs" />
+    <Compile Include="Uow\UnitOfWorkAttribute.cs" />
+    <Compile Include="Uow\UnitOfWorkHelper.cs" />
+    <Compile Include="Uow\UnitOfWorkManager.cs" />
+    <Compile Include="Uow\UnitOfWorkProvider.cs" />
+    <Compile Include="Uow\UnitOfWorkRegistrar.cs" />
+    <Compile Include="Utils\NullDisposable.cs" />
+    <Compile Include="Utils\RandomHelper.cs" />
+    <Compile Include="Utils\XmlHelper.cs" />
+    <Compile Include="Web\CookieHelper.cs" />
+    <Compile Include="Web\HttpClientHelper.cs" />
+    <Compile Include="Web\SessionHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Authorization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\MemCache\BeITMemcached.dll" />
+    <Content Include="Library\NOPI\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Library\NOPI\NPOI.dll" />
+    <Content Include="Library\NOPI\NPOI.OOXML.dll" />
+    <Content Include="Library\NOPI\NPOI.OpenXml4Net.dll" />
+    <Content Include="Library\NOPI\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Library\SharpZipLib\ICSharpCode.SharpZipLib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
